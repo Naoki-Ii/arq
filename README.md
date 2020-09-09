@@ -1,24 +1,22 @@
-# README
+入退室管理システム heytaisho
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Description
+* 現状: 紙で入退室を管理
+* 概要: この業務をwebシステム化する
+​
+Development Environment
+* ruby 2.6.3
+* Rails 6系
+* データベースは開発、本番環境共にMYSQL
+* docker環境構築
+* https://qiita.com/yongjugithub/items/e5bbc84fcbbb1fd290c7
+* プログラムはdockerイメージからコンテナをビルドして立ち上げる
+* 例)
+- 1.git clone github-URL
+- 2.docker-compose up --build
+- 3.http://localhost:3000/ にアクセス
+​
+DATABASE
+* receptionテーブル カラム: name, purpose, company, timestamps
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Author
