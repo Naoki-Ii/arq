@@ -6,14 +6,14 @@ class ReceptionsController < ApplicationController
   def create
     @reception = Reception.new(reception_params)
     if @reception.save
-      render 'new'
+      redirect_to '/receptions/new'
     else
-      render 'new'
+      redirect_to '/receptions/new'
     end
   end
 
   private
-  
+
     def reception_params
       params.require(:reception).permit(:name, :purpose, :organization)
     end
