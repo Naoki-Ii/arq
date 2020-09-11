@@ -34,6 +34,8 @@ group :development, :test do
   # テストフレームワーク
   gem "rspec-rails"
   gem "factory_bot_rails"
+  # feature Specに必要
+  gem "capybara"
 end
 
 group :development do
