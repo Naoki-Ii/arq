@@ -7,8 +7,13 @@ RSpec.describe Reception, type: :model do
     expect(reception).to be_valid
   end
 
-  it 'nameがなければ無効' do
+  it 'nameの値が１文字以上なければ無効' do
     reception.name = ''
+    expect(reception).not_to be_valid
+  end
+
+  it 'nameが50文字以上は無効' do
+    reception.name = 'a' * 51
     expect(reception).not_to be_valid
   end
 
