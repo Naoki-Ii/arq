@@ -3,22 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>HEY-TAISHO</title>
-    <link rel="stylesheet" href="app\assets\stylesheets\stylesheet.css">
   </head>
   <body>
     <h1>いらっしゃいませ。</h1>
     <h2>御用の方は下記を埋めまして、123番にお電話ください。</h2>
-    <form class="input-name" action="index.html" method="post">
-      <input type="text" placeholder="名前を入力してください。">
+    <%= form_with model: @reception do |f| %>
+      <div class="input-name">
+        <%= f.text_field :name, placeholder: "名前を入力してください" %>
+      </div>
       <p>
-      <select class="reason">
-        <option value="理由を選択してください。">---理由を選択してください---</option>
-        <option value="面接のため">面接のため</option>
-        <option value="面談のため">面談のため</option>
-        <option value="打ち合わせのため">打ち合わせのため</option>
-      </select>
+        <%= f.select :purpose,
+        (
+          [
+            ['---理由を選択してください---', ''],
+            ["面接のため", '面接'],
+            ["面談のため", '面談'],
+            ["打ち合わせのため", '打ち合わせ'],
+            ["その他", 'その他']
+          ]
+        )
+        %>
       </p>
       <img src="arqlogo.png" alt="ロゴ">
     </form>
+      <%= f.submit '送信する' %>
+    <% end %>
   </body>
 </html>
