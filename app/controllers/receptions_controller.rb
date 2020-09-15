@@ -14,6 +14,10 @@ class ReceptionsController < ApplicationController
     end
   end
 
+  def index
+    @receptions = Reception.all
+  end
+
   private
 
     def reception_params

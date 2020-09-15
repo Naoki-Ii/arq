@@ -14,8 +14,16 @@ RSpec.describe "Receptions", type: :feature do
   end
 
   xit 'post後記入項目が足りていれば、サクセスメッセージがでる' do
+    visit new_reception_path
+    fill_in 'name', with: 'tanaka'
+    fill_in 'purpose', with: '1'
+    expect(page).to have_content '完了'
   end
 
   xit 'post後記入項目が不足していたら、エラーメッセージが出る' do
+    visit new_reception_path
+    fill_in 'name', with: ''
+    fill_in 'purpose', with: ''
+    expect(page).to have_content '記入'
   end
 end
