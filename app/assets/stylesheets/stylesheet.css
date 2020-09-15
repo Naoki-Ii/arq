@@ -1,6 +1,8 @@
 @charset "UTF-8";
 body {
-  background-image:
+  background-image: url('/assets/bg.png');
+  background-size: 100% auto;
+  margin: 0px;
 }
 h1 {
   color: #0c4da2;
