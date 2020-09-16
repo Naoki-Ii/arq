@@ -1,6 +1,8 @@
 @charset "UTF-8";
 body {
-  background-image:
+  background-image: url('/assets/bg.png');
+  background-size: 100% auto;
+  margin: 0px;
 }
 h1 {
   color: #0c4da2;
@@ -23,11 +25,12 @@ input {
   text-align: center;
 }
 select {
-  margin-top: 40px;
+  margin-bottom: 40px;
   font-size: 30px;
   text-align: center;
+  width: 700px;
 }
 img {
-  position: relative; bottom: -100px;
-  position: relative; right: 500px;
+  margin-top: 70px;
+  position: absolute; right: 20%;
 }

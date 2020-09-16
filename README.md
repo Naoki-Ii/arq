@@ -18,6 +18,11 @@
 - 4.開発環境下でのアプリを表示可能
 ​
 # DATABASE
-- receptionテーブル カラム: name, purpose, organization, timestamps
+* 受付(reception)テーブル構造
+- 項目: 名前、目的、組織、更新時間、作成時間
+
+# 画面構成
+* トップ画面:受付登録画面 (receptions/new )
+* 受付一覧画面 (receptions/index)
 
 # Author
