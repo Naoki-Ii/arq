@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>管理画面</title>
+  </head>
+  <body>
+    <div class="container">
+      <table class="flex">
+        <tr>
+          <th>名前</th>
+          <th>目的</th>
+          <th>受付時間</th>
+        </tr>
+        <% @receptions.each do |reception| %>
+        <tr>
+          <td><%= reception.name %></td>
+          <td><%= reception.purpose %></td>
+          <td><%= reception.created_at.strftime('20%y/%m/%d %H:%M') %></td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  </body>
+</html>

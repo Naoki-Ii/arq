@@ -34,3 +34,30 @@ img {
   margin-top: 70px;
   position: absolute; right: 20%;
 }
+
+/* index 一覧画面　*/
+.container {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+  font-family: Linotte,YuGothic,'Yu Gothic',游ゴシック体,游ゴシック,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Roboto,メイリオ,Meiryo,'ＭＳ Ｐゴシック',Osaka,'MS PGothic',Arial,Helvetica,Verdana,sans-serif!important;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flex th {
+  color: white;
+  background: linear-gradient(#829ebc,#225588);
+}
+
+.flex td {
+  text-align: center;
+  border-bottom: 1px solid #a8b7c5;
+  border-top:none;
+  padding: 5px 0;
+}

@@ -5,6 +5,7 @@
     <title>管理画面</title>
   </head>
   <body>
+    <% @receptions.each do |reception| %>
     <table border="1">
       <tr>
         <th>一覧</th>
@@ -15,5 +16,6 @@
         <th>目的</th>
       </tr>
     </table>
+    <% end %>
   </body>
 </html>
