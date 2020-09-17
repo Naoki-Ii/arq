@@ -2,14 +2,14 @@ require 'rails_helper'
 
 RSpec.describe "Receptions", type: :request do
   describe "" do
-    xit "GET /receptions/new" do
+    it "GET /receptions/new" do
       get new_reception_path
       expect(response).to have_http_status(:success)
     end
 
-    xit "POST /receptions -成功" do
+    it "POST /receptions -成功" do
       expect do
-        post receptions, params: {
+        post receptions_path, params: {
           reception: {
             name: 'tanaka taro',
             purpose: '面談',
@@ -19,9 +19,9 @@ RSpec.describe "Receptions", type: :request do
       expect(response.status).to eq 302
     end
 
-    xit "POST /receptions - 失敗" do
+    it "POST /receptions - 失敗" do
       expect do
-        post receptions, params: {
+        post receptions_path, params: {
           reception: {
             name: '',
             purpose: '',
@@ -31,7 +31,7 @@ RSpec.describe "Receptions", type: :request do
       expect(response.status).to eq 302
     end
 
-    xit "GET /receptions" do
+    it "GET /receptions" do
       get receptions_path
       expect(response).to have_http_status(:success)
     end

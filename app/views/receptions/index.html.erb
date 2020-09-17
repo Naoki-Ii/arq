@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>管理画面</title>
+  </head>
+  <body class="index">
+    <div class="header">
+      <div class="header-title">
+        <div class="header-title">受付一覧画面</div>
+      </div>
+    </div>
+    <div class="container">
+      <%= paginate @receptions %>
+      <table class="flex">
+        <tr>
+          <th>ID</th>
+          <th>名前</th>
+          <th>目的</th>
+          <th>受付時間</th>
+        </tr>
+        <% @receptions.each do |reception| %>
+        <tr>
+          <td><%= reception.id %></td>
+          <td><%= reception.name %></td>
+          <td><%= reception.purpose %></td>
+          <td><%= reception.created_at.strftime('20%y/%m/%d %H:%M') %></td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+    <footer>
+    </footer>
+  </body>
+</html>

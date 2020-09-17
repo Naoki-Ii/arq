@@ -1,4 +1,6 @@
 class ReceptionsController < ApplicationController
+  MAX_DISPLAY = 15
+
   def new
     @reception = Reception.new
   end
@@ -15,7 +17,7 @@ class ReceptionsController < ApplicationController
   end
 
   def index
-    @receptions = Reception.all
+    @receptions = Reception.order(created_at: :ASC).page(params[:page]).per(MAX_DISPLAY)
   end
 
   private
