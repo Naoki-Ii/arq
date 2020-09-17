@@ -36,9 +36,12 @@ img {
 }
 
 /* index 一覧画面　*/
+.index {
+  background-image: none;
+  background-color: #f8f8f8;
+}
+
 .container {
-  width: 70%;
-  margin: 0 auto;
   font-size: 20px;
   text-align: center;
   font-family: Linotte,YuGothic,'Yu Gothic',游ゴシック体,游ゴシック,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Roboto,メイリオ,Meiryo,'ＭＳ Ｐゴシック',Osaka,'MS PGothic',Arial,Helvetica,Verdana,sans-serif!important;
