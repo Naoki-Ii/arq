@@ -3,7 +3,8 @@
 # Description
 * 現状: 紙で入退室を管理
 * 概要: この業務をwebシステム化する
-​
+* 機能: 受付画面から受付登録、一覧画面の閲覧、ログイン機能
+
 # Development Environment
 * Ruby 2.6.3
 * Rails 6系
@@ -23,6 +24,8 @@ docker-compose up --build
 # データベース
 * 1.受付(reception)テーブル
 - 項目: 名前、目的、組織、更新時間、作成時間
+* 2.部屋(room)テーブル
+- 項目: 名前、パスワード、更新時間、作成時間
 
 # 画面構成(URL)
 * トップ画面/受付登録画面 ( /receptions/new )
