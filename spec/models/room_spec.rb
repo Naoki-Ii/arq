@@ -21,4 +21,14 @@ RSpec.describe Room, type: :model do
     room.name = '日本語'
     expect(room).not_to be_valid
   end
+
+  it 'passwordが全て空白だと無効' do
+    room.password = '' * 6
+    expect(room).not_to be_valid
+  end
+
+  it 'passwordが6文字以下だと無効' do
+    room.password = 'a' * 5
+    expect(room).not_to be_valid
+  end
 end

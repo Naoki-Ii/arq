@@ -1,5 +1,7 @@
 FactoryBot.define do
   factory :room do
-    name { "MyString" }
+    name { "mystring" }
+    password { "androbo" }
+    password_confirmation { "androbo" }
   end
 end
