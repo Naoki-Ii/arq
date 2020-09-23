@@ -16,4 +16,9 @@ RSpec.describe Room, type: :model do
     room.name = 'a' * 51
     expect(room).not_to be_valid
   end
+
+  it 'nameに半角アルファベット以外が含まれていたら無効' do
+    room.name = '日本語'
+    expect(room).not_to be_valid
+  end
 end
