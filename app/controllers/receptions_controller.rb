@@ -1,4 +1,5 @@
 class ReceptionsController < ApplicationController
+  before_action :logged_in_room, only: [:index]
   MAX_DISPLAY = 15
 
   def new
@@ -24,5 +25,12 @@ class ReceptionsController < ApplicationController
 
     def reception_params
       params.require(:reception).permit(:name, :purpose, :organization)
+    end
+
+    def logged_in_room
+      unless logged_in?
+        flash[:alert] = "ログインが必要です"
+        redirect_to login_path
+      end
     end
 end
