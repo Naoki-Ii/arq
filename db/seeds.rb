@@ -1,7 +1,18 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# 以下コマンドで初期データ投入
+# docker-compose run web rails db:reset && docker-compose run web rails db:seed
+
+room = Room.new(
+  name: 'toranomon',
+  password: 'androbo',
+  password_confirmation: 'androbo'
+  )
+room.save
+
+# 関連テーブルの作成は紐づくモデルのIDの変更に注意すること
+# 本番環境のMYSQLでは仕様によりIDが連番ではなく10ごとに飛ぶため文法エラーに注意
+16.times do |n|
+  Reception.create!(
+    name: "sample visiter #{n + 1}",
+    purpose: "面談"
+  )
+end
