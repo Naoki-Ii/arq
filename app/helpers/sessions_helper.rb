@@ -10,4 +10,14 @@ module SessionsHelper
       @current_room ||= Room.find_by(id: session[:room_id])
     end
   end
+
+  # ログインしているかどうか判断する
+  def logged_in?
+    !current_room.nil?
+  end
+
+  def log_out
+    session.delete(:room_id)
+    @current_room = nil
+  end
 end

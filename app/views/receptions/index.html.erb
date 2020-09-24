@@ -7,7 +7,7 @@
   <body class="index">
     <div class="header">
       <div class="header-title">
-        <div class="header-title">受付一覧画面</div>
+        <div class="header-title">受付一覧: <%= current_room.name %><%= link_to "Log out", logout_path, method: :delete %></div>
       </div>
     </div>
     <div class="container">
