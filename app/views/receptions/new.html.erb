@@ -26,7 +26,7 @@
       </p>
       <%= f.submit '送信する' %>
     <% end %>
-    <!--  Railsでは画像のパスは /assets/画像/ の形式になっているみたいです　-->
-    <img src="/assets/arqlogo.png" alt="ロゴ">
+    <!--  image_tag asset_path("ファイル名")で開発、本番環境両方で表示できるみたいです　-->
+    <%= image_tag asset_path("arqlogo", alt: "ロゴ") %>
   </body>
 </html>
