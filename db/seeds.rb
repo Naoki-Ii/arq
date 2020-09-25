@@ -1,5 +1,6 @@
 # 以下コマンドで初期データ投入
 # docker-compose run web rails db:reset && docker-compose run web rails db:seed
+# 本番環境: rails db:create && rails db:migrate && rails db:seed
 
 room = Room.new(
   name: 'toranomon',

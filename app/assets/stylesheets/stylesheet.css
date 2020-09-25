@@ -1,6 +1,7 @@
 @charset "UTF-8";
+/* 背景画像のパスはpublic/imagesに格納　*/
 body {
-  background-image: url('/assets/bg.png');
+  background-image: url('/images/bg.png');
   background-size: 100% auto;
   margin: 0px;
 }
@@ -54,7 +55,7 @@ img {
 .container {
   font-size: 20px;
   text-align: center;
-  font-family: Linotte,YuGothic,'Yu Gothic',游ゴシック体,游ゴシック,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Roboto,メイリオ,Meiryo,'ＭＳ Ｐゴシック',Osaka,'MS PGothic',Arial,Helvetica,Verdana,sans-serif!important;
+  font-family: Linotte,YuGothic,'Yu Gothic',游ゴシック体,游ゴシック;
 }
 
 .flex {
