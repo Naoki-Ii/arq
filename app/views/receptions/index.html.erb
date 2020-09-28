@@ -8,7 +8,6 @@
     <header>受付一覧: 虎ノ門<%= link_to "ログアウト", logout_path, method: :delete %>
     </header>
     <div class="container">
-      <%= paginate @receptions %>
       <table class="flex">
         <tr>
           <th>ID</th>
@@ -25,6 +24,7 @@
         </tr>
         <% end %>
       </table>
+      <%= paginate @receptions %>
     </div>
     <footer>
     </footer>
