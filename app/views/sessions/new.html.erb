@@ -1,14 +1,12 @@
 <body>
-  <h1>Login</h1>
+  <h1>受付管理ログイン</h1>
   <%= form_for(:session, url: login_path) do |f| %>
-    <div class="input-name">
-      <%= f.label :password, '部屋の名前' %>
+    <div>
       <%= f.text_field :name, placeholder: "部屋の名前を入力してください" %>
     </div>
-    <div class="form-group">
-      <%= f.label :password, 'パスワード' %>
+    <div>
       <%= f.password_field :password, placeholder: 'パスワードを入力してください' %>
-      <%= f.submit 'ログイン' %>
     </div>
+    <%= f.submit 'ログイン' %>
   <% end %>
 </body>
