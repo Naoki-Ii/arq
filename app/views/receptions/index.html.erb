@@ -7,25 +7,25 @@
   <body>
     <header>受付一覧: 虎ノ門<%= link_to "ログアウト", logout_path, method: :delete %>
     </header>
-    <div class="container">
-      <%= paginate @receptions %>
-      <table class="flex">
-        <tr>
-          <th>ID</th>
-          <th>名前</th>
-          <th>目的</th>
-          <th>受付時間</th>
-        </tr>
-        <% @receptions.each do |reception| %>
-        <tr>
-          <td><%= reception.id %></td>
-          <td><%= reception.name %></td>
-          <td><%= reception.purpose %></td>
-          <td><%= reception.created_at.strftime('20%y/%m/%d %H:%M') %></td>
-        </tr>
-        <% end %>
+      <table>
+        <tbody>
+          <tr>
+            <th>ID</th>
+            <th>名前</th>
+            <th>目的</th>
+            <th>受付時間</th>
+          </tr>
+          <% @receptions.each do |reception| %>
+          <tr>
+            <td><%= reception.id %></td>
+            <td><%= reception.name %></td>
+            <td><%= reception.purpose %></td>
+            <td><%= reception.created_at.strftime('20%y/%m/%d %H:%M') %></td>
+          </tr>
+          <% end %>
+        </tbody>
       </table>
-    </div>
+      <%= paginate @receptions %>
     <footer>
     </footer>
   </body>

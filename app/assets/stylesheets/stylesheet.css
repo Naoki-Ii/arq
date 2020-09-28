@@ -37,34 +37,30 @@ img {
 /* receptions/index 受付一覧画面　*/
 header {
   height: 10%;
-  padding: 3%;
+  padding: 2%;
   text-align: center;
   font-size: 30px;
 }
 header a {
-  position: absolute; right: 15%;
+  position: absolute; right: 18%;
   font-size: 15px;
   text-decoration: none;
 }
-.container {
-  font-size: 20px;
+table {
+  width: 60%;
+  margin: auto;
+}
+th {
+  border-bottom: 1px solid;
+}
+td {
   text-align: center;
-  font-family: Linotte,YuGothic,'Yu Gothic',游ゴシック体,游ゴシック;
+  padding: 6px 0;
+  width: 25%
 }
-.flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.flex th {
-  color: white;
-  background: linear-gradient(#829ebc,#225588);
-}
-.flex td {
+.pagination {
+  padding: 10px;
   text-align: center;
-  border-bottom: 1px solid #a8b7c5;
-  border-top:none;
-  padding: 5px 0;
 }
 footer {
   height: 70px;
