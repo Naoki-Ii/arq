@@ -1,25 +1,35 @@
-<body>
-  <h1>いらっしゃいませ</h1>
-  <h2>ご用の方は下記を埋めまして 123番にお電話ください</h2>
-    <%= form_with model: @reception do |f| %>
-      <div>
-        <%= f.text_field :name, placeholder: "名前を入力してください" %>
-      </div>
-      <div>
-        <%= f.select :purpose,
-        (
-          [
-            ['ご用件を選択してください',  ''],
-            ["面接のため", '面接'],
-            ["面談のため", '面談'],
-            ["打ち合わせのため", '打ち合わせ'],
-            ["その他", 'その他']
-          ]
-        )
-        %>
-      </div>
-      <%= f.submit '送信する' %>
-    <% end %>
-  <!--  image_tag asset_path("ファイル名")で開発、本番環境両方で表示可　-->
-  <!-- <%= image_tag asset_path("arqlogo", alt: "ロゴ") %> -->
-</body>
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>受付画面</title>
+  </head>
+  <body>
+    <h1>いらっしゃいませ</h1>
+    <h2>ご用の方は下記を埋めまして 123番にお電話ください</h2>
+      <%= form_with model: @reception do |f| %>
+        <ul>
+          <li>
+            <%= f.text_field :name, placeholder: "名前を入力してください" %>
+          </li>
+          <li>
+            <%= f.select :purpose,
+            (
+              [
+                ['ご用件を選択してください',  ''],
+                ["面接のため", '面接'],
+                ["面談のため", '面談'],
+                ["打ち合わせのため", '打ち合わせ'],
+                ["その他", 'その他']
+              ]
+            )
+            %>
+          </li>
+          <li>
+            <%= f.submit '送信する' %>
+          </li>
+        </ul>
+      <% end %>
+    <!--  image_tag asset_path("ファイル名")で開発、本番環境両方で表示可　-->
+  </body>
+</html>
