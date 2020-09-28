@@ -17,17 +17,29 @@ h2 {
   text-align: center;
 }
 form {
+  width: 60%;
+  margin: auto;
+}
+ul {
+  list-style: none;
+  width: 100%;
   text-align: center;
 }
-div {
-  padding-bottom: 20px;
-}
-select, input {
+input[type=text], select {
   text-align: center;
+  width: 55%;
   font-size: 30px;
-  width: 50%;
-  height: 30%;
   padding: 1%;
+  margin: 10px;
+}
+input[type=submit] {
+  text-align: center;
+  width: 55%;
+  font-size: 20px;
+  padding: 1%;
+  margin: 10px;
+  border: 1px solid #CCC;
+  border-radius: 1em;
 }
 img {
   padding: 2%;
