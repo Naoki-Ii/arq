@@ -1,6 +1,6 @@
 class ReceptionsController < ApplicationController
   before_action :logged_in_room, only: [:index]
-  MAX_DISPLAY = 15
+  MAX_DISPLAY = 10
 
   def new
     @reception = Reception.new
