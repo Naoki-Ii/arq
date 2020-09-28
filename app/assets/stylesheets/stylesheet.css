@@ -21,7 +21,7 @@ form {
 div {
   padding-bottom: 20px;
 }
-input, text, select {
+select, input {
   text-align: center;
   font-size: 30px;
   width: 50%;
