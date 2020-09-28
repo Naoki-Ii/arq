@@ -4,12 +4,9 @@
     <meta charset="utf-8">
     <title>管理画面</title>
   </head>
-  <body class="index">
-    <div class="header">
-      <div class="header-title">
-        <div class="header-title">受付一覧: <%= current_room.name %><%= link_to "Log out", logout_path, method: :delete %></div>
-      </div>
-    </div>
+  <body>
+    <header>受付一覧: 虎ノ門<%= link_to "ログアウト", logout_path, method: :delete %>
+    </header>
     <div class="container">
       <%= paginate @receptions %>
       <table class="flex">
