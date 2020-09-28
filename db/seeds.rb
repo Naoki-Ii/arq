@@ -13,7 +13,7 @@ room.save
 # 本番環境のMYSQLでは仕様によりIDが連番ではなく10ごとに飛ぶため文法エラーに注意
 16.times do |n|
   Reception.create!(
-    name: "sample visiter #{n + 1}",
+    name: "sample visiter",
     purpose: "面談"
   )
 end
