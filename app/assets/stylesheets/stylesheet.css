@@ -37,7 +37,7 @@ img {
 /* receptions/index 受付一覧画面　*/
 header {
   height: 10%;
-  padding: 2%;
+  padding: 3%;
   text-align: center;
   font-size: 30px;
 }
@@ -51,12 +51,12 @@ table {
   margin: auto;
 }
 th {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid black;
 }
 td {
   text-align: center;
   padding: 6px 0;
-  width: 25%
+  width: 33%;
 }
 .pagination {
   padding: 10px;
