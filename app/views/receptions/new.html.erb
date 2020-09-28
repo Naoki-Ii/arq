@@ -1,12 +1,11 @@
 <body>
   <h1>いらっしゃいませ</h1>
   <h2>御用の方は下記を埋めまして,123番にお電話ください</h2>
-  <div class="formcontainer">
     <%= form_with model: @reception do |f| %>
-      <div class="input">
+      <div>
         <%= f.text_field :name, placeholder: "名前を入力してください" %>
       </div>
-      <div class="input">
+      <div>
         <%= f.select :purpose,
         (
           [
@@ -21,7 +20,6 @@
       </div>
       <%= f.submit '送信する' %>
     <% end %>
-  </div>
   <!--  image_tag asset_path("ファイル名")で開発、本番環境両方で表示可　-->
   <%= image_tag asset_path("arqlogo", alt: "ロゴ") %>
 </body>
