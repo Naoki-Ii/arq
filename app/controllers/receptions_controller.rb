@@ -18,7 +18,7 @@ class ReceptionsController < ApplicationController
   end
 
   def index
-    @receptions = Reception.order(created_at: :ASC).page(params[:page]).per(MAX_DISPLAY)
+    @receptions = Reception.order(created_at: :DESC).page(params[:page]).per(MAX_DISPLAY)
   end
 
   private
