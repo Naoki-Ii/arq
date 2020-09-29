@@ -46,8 +46,19 @@ input[type=submit] {
   font-size: 20px;
   border: 1px solid #CCC;
   border-radius: 1rem;
+  margin-bottom: 20px;
   padding: 1%;
 }
+input[type=password] {
+  text-align: center;
+  width: 55%;
+  font-size: 20px;
+  border: 1px solid #CCC;
+  border-radius: 1rem;
+  margin-bottom: 30px;
+  padding: 1%;
+}
+
 img {
   padding: 2%;
   position: absolute; right: 20%;

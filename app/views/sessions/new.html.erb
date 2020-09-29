@@ -3,7 +3,13 @@
   <%= form_for(:session, url: login_path) do |f| %>
     <ul>
       <li>
-        <%= f.text_field :name, placeholder: "部屋の名前を入力してください" %>
+        <%= f.label :name, "オフィス名" %>
+      </li>
+      <li>
+        <%= f.text_field :name, placeholder: "オフィス名を入力してください" %>
+      </li>
+      <li>
+        <%= f.label :password, "パスワード" %>
       </li>
       <li>
         <%= f.password_field :password, placeholder: 'パスワードを入力してください' %>
