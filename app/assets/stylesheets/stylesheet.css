@@ -22,6 +22,7 @@ form {
 }
 ul {
   list-style: none;
+  padding-left: 0;
   width: 100%;
   text-align: center;
 }
